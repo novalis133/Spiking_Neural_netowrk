@@ -45,7 +45,7 @@ This repo contains code for testing neuron models using different backpropagatio
 - PyTorch 1.11 cuda XX or higher
 - snntorch 'pip install snntorch'
 
-Neuron Models Folder
+## Neuron Models Folder
 ├── Python Files
 │   ├── earlystopping.py
 │   ├── models.py
