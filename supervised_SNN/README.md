@@ -46,7 +46,7 @@ This repo contains code for testing neuron models using different backpropagatio
 - snntorch 'pip install snntorch'
 
 ## Neuron Models Folder
-'' ├── Python Files
+├── Python Files
 │   ├── earlystopping.py
 │   ├── models.py
 │   └── main.py
@@ -74,6 +74,6 @@ This repo contains code for testing neuron models using different backpropagatio
         ├── SG_results
         ├── earlystopping.py
         ├── BP_main.py
-        └── main.py ''
+        └── main.py 
       
 
