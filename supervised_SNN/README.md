@@ -45,35 +45,25 @@ This repo contains code for testing neuron models using different backpropagatio
 - PyTorch 1.11 cuda XX or higher
 - snntorch 'pip install snntorch'
 
-## Neuron Models Folder
-├── Python Files
-│   ├── earlystopping.py
-│   ├── models.py
-│   └── main.py
-└── Subfolders
-    ├── alpha
-    │   ├── BP_results
-    │   ├── SG_results
-    │   ├── earlystopping.py
-    │   ├── BP_main.py
-    │   └── main.py
-    ├── leaky
-    │   ├── BP_results
-    │   ├── SG_results
-    │   ├── earlystopping.py
-    │   ├── BP_main.py
-    │   └── main.py
-    ├── synaptic
-    │   ├── BP_results
-    │   ├── SG_results
-    │   ├── earlystopping.py
-    │   ├── BP_main.py
-    │   └── main.py
-    └── lapicque
-        ├── BP_results
-        ├── SG_results
-        ├── earlystopping.py
-        ├── BP_main.py
-        └── main.py 
+## Neuron Models Folder Structure
+
+- **Python Files**
+  - `earlystopping.py`
+  - `models.py`
+  - `main.py`
+- **Subfolders**
+  - **alpha**
+    - `BP_results`, `SG_results`
+    - `earlystopping.py`, `BP_main.py`, `main.py`
+  - **leaky**
+    - `BP_results`, `SG_results`
+    - `earlystopping.py`, `BP_main.py`, `main.py`
+  - **synaptic**
+    - `BP_results`, `SG_results`
+    - `earlystopping.py`, `BP_main.py`, `main.py`
+  - **lapicque**
+    - `BP_results`, `SG_results`
+    - `earlystopping.py`, `BP_main.py`, `main.py`
+
       
 
