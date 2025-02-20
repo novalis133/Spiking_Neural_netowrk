@@ -7,18 +7,21 @@ This project implements a Spiking Neural Network (SNN) for reinforcement learnin
 ## Files
 - `run.py`: Main script that sets up the environment, defines the neural network model, and executes the training loop.
 - `s_policy.py`: Contains the definition of the policy network used by the SNN agent, including action selection and reinforcement learning dataset preparation.
+- `SNN_BP_Part_3.ipynb`: Jupyter notebook containing detailed implementation and explanation of the SNN backpropagation algorithm.
 
 ## Requirements
 - Python 3.x
 - PyTorch
 - gym
 - snntorch
+- numpy
+- matplotlib (for visualization)
 
 ## Installation
 To set up the environment, run:
-\```bash
-pip install torch gym snntorch
-\```
+```bash
+pip install torch gym snntorch numpy matplotlib
+```
 
 ## Usage
 Run the main script to start training:

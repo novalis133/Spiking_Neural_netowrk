@@ -1,27 +1,31 @@
 # Description: Policy network for the SNN agent
+import numpy as np
+from collections import deque
 import torch
 import torch.nn as nn
-
-torch.manual_seed(0)
-
-import base64, io
+import torch.nn.functional as F
+from torch.distributions import Categorical
+from torch.utils.data import Dataset, DataLoader
+import snntorch as snn
+import snntorch.functional as SF
+from snntorch import backprop
 
 # For visualization
+import base64, io
 from gym.wrappers.monitoring import video_recorder
 from IPython.display import HTML
 from IPython import display
 import glob
 
+# Set random seed for reproducibility
 torch.manual_seed(0)
 
-
 class S_Policy(nn.Module):
-    def __init__(self, num_inputs=4, num_hidden=32, num_outputs=2, ):
+    def __init__(self, num_inputs=4, num_hidden=32, num_outputs=2):
         super().__init__()
         # Network Architecture
-        # self.num_steps = 25
         beta = 0.95
-        self.device = torch.device( "cpu")
+        self.device = torch.device("cpu")
         # Initialize layers
         self.fc1 = nn.Linear(num_inputs, num_hidden)
         self.lif1 = snn.Leaky(beta=beta)
@@ -38,17 +42,15 @@ class S_Policy(nn.Module):
         spk2_rec = []
         mem2_rec = []
 
-        #for step in range(self.num_steps):
         cur1 = self.fc1(x)
         spk1, mem1 = self.lif1(cur1, mem1)
         cur2 = self.fc2(spk1)
         spk2, mem2 = self.lif2(cur2, mem2)
         spk2_rec.append(spk2)
         mem2_rec.append(mem2)
-        #print(spk2_rec)
+
         return torch.stack(spk2_rec, dim=0), torch.stack(mem2_rec, dim=0)
 
-    # Function to select an action
     def act(self, state, temperature=1.0):
         """
         This method selects an action based on the state.
@@ -76,51 +78,21 @@ class S_Policy(nn.Module):
         action = action_dist.sample() # Sample an action
         return action.item(), action_dist.log_prob(action) # Return the action and the log probability
 
-import numpy as np
-from collections import deque
-import torch.nn.functional as F
-from torch.distributions import Categorical
-from torch.utils.data import Dataset, DataLoader
-import snntorch as snn
-import snntorch.functional as SF
-from snntorch import backprop
-import torch
-import torch.nn as nn
-
 class RL_Dataset(Dataset):
-    """ PyTorch Dataset for offline RL """
-
-    def __init__(self, states, actions) :# rewards, next_states, dones):
+    def __init__(self, states, actions):
         self.states = states
         self.actions = actions
-        #self.rewards = rewards
-        #self.next_states = next_states
-        #self.dones = dones
 
     def __len__(self):
         return len(self.states)
 
     def __getitem__(self, idx):
-        # Convert the items to tensors before returning
         state = torch.tensor(self.states[idx]).float()
-        #reward = torch.tensor(self.rewards[idx]).float()
-        #next_state = torch.tensor(self.next_states[idx]).float()
-        #done = torch.tensor(self.dones[idx]).float()
-
-        # Create a single data tensor by concatenating other tensors
-        #data = torch.cat((state, reward.unsqueeze(0), next_state, done.unsqueeze(0)))
-
-        # Convert the action to a tensor and return it as the target
-        target = torch.tensor(self.actions[idx]).long()  # Assuming the action is an integer
-
+        target = torch.tensor(self.actions[idx]).long()
         return state, target
 
-
-
-
-# Function to train the policy using reinforce
-def reinforce(policy,BP_policy, policy_optimizer, snn_optimizer,
-              env, device, n_episodes=500, max_t=10, gamma=1.0, print_every=100):
+def reinforce(policy, BP_policy, policy_optimizer, snn_optimizer,
+             env, device, n_episodes=500, max_t=10, gamma=1.0, print_every=100):
     """
     Train a policy using the REINFORCE algorithm.
 

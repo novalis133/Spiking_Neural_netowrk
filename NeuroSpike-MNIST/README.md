@@ -221,4 +221,13 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - PyTorch team
 - Neural coding and SNN research community
 
-## Contact
+## Development Setup
+
+### Pre-commit Hooks
+This project uses pre-commit hooks to maintain code quality. To set up:
+
+1. Install pre-commit:
+```bash
+conda activate rsnn
+pre-commit install
+```

@@ -1,24 +1,45 @@
 # Spiking Neural Network Implementations
 
-This repository contains various implementations of Spiking Neural Networks (SNNs) including:
+This repository contains various implementations of Spiking Neural Networks (SNNs) for different learning paradigms.
 
 ## Project Structure
 
 - **NeuroSpike-MNIST**: Implementation of SNN for MNIST dataset classification
-- **drl_SNN**: Deep Reinforcement Learning with Spiking Neural Networks
+- **drl_SNN**: Deep Reinforcement Learning with SNNs
+  - Implementation of CartPole environment using SNNs
+  - Includes tutorial notebook and production code
+  - Uses policy gradient method with leaky integrate-and-fire neurons
 - **supervised_SNN**: Supervised Learning implementations using SNNs
 
 ## Getting Started
 
-[Add installation instructions here]
+### Prerequisites
+- Python 3.x
+- PyTorch
+- SNNTorch
+- OpenAI Gym
+- NumPy
+- Matplotlib
+
+### Installation
+```bash
+pip install torch snntorch gym numpy matplotlib
+```
 
 ## Usage
 
-[Add usage instructions and examples here]
+Each implementation has its own directory with specific instructions.
 
-## Requirements
+## Development Setup
 
-[Add dependencies and requirements here]
+### Pre-commit Hooks
+This project uses pre-commit hooks to maintain code quality. To set up:
+
+- Install pre-commit:
+```bash
+conda activate rsnn
+pre-commit install
+```
 
 ## Contributing
 
