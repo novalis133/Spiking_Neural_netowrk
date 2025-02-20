@@ -32,7 +32,7 @@ This project implements a Spiking Neural Network (SNN) framework with the follow
 - Configurable training pipeline
 
 ## Project Structure
-.
+
 ├── src/
 │   ├── data/           # Data loading and preprocessing
 │   │   ├── data_loader.py
