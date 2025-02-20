@@ -65,5 +65,52 @@ This repo contains code for testing neuron models using different backpropagatio
     - `BP_results`, `SG_results`
     - `earlystopping.py`, `BP_main.py`, `main.py`
 
-      
+  # SNN Models Documentation
+
+## Network Architecture
+- Input Layer: 784 neurons (28x28 MNIST images)
+- First Conv Layer: 12 channels, 5x5 kernel
+- Second Conv Layer: 64 channels, 5x5 kernel
+- Output Layer: 10 neurons (digit classes)
+
+## Neuron Parameters
+- Beta (decay factor): 0.5
+- Alpha (synaptic decay): 0.9
+- Slope: 50
+- Time steps: 25
+
+## Surrogate Gradients
+- FastSigmoid
+- Triangular
+- Sigmoid
+- SparseFastSigmoid
+- SpikeRateEscape
+- StochasticSpikeOperator
+- StraightThroughEstimator
+- ATan
+
+# Training Documentation
+
+## Configuration
+- Batch Size: 128
+- Learning Rate: 1e-2
+- Optimizer: Adamax
+- Loss Function: Cross-Entropy Rate Loss
+- Early Stopping: 10 epochs patience
+
+## Training Process
+1. Forward Pass
+   - Processes input through convolutional layers
+   - Applies neuron dynamics
+   - Records spike and membrane potentials
+
+2. Backward Pass
+   - Uses specified surrogate gradient
+   - Implements chosen backpropagation method
+   - Updates weights using Adamax optimizer
+
+3. Evaluation
+   - Tracks training and test accuracy
+   - Records results in CSV files
+   - Implements early stopping
 
