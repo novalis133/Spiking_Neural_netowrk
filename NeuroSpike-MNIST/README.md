@@ -32,6 +32,7 @@ This project implements a Spiking Neural Network (SNN) framework with the follow
 - Configurable training pipeline
 
 ## Project Structure
+```markdown
 .
 ├── src/
 │   ├── data/           # Data loading and preprocessing
@@ -55,7 +56,7 @@ This project implements a Spiking Neural Network (SNN) framework with the follow
 ├── requirements.txt    # Project dependencies
 ├── Dockerfile         # Container configuration
 └── README.md          # Project documentation
-
+```
 
 ## Key Components
 
