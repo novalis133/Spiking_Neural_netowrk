@@ -32,29 +32,28 @@ This project implements a Spiking Neural Network (SNN) framework with the follow
 - Configurable training pipeline
 
 ## Project Structure
-📦 Project Root
-├── src/
-│   ├── data/                   # Data loading and preprocessing
-│   │   ├── data_loader.py
-│   │   ├── preprocessor.py
-│   │   └── README.md
-│   ├── models/                 # SNN model implementations
-│   │   ├── snn_model.py
-│   │   ├── layers.py
-│   │   └── README.md
-│   ├── training/              # Training and evaluation
-│   │   ├── trainer.py
-│   │   ├── metrics.py
-│   │   └── README.md
-│   ├── utils/                 # Utilities and visualization
-│   │   ├── config.py
-│   │   ├── visualization.py
-│   │   └── README.md
-│   └── main.py               # Main execution script
-├── config.yaml               # Configuration file
-├── requirements.txt          # Project dependencies
-├── Dockerfile               # Container configuration
-└── README.md               # Project documentation
+├── 📂 src/
+│   ├── 📂 data/                   # Data loading and preprocessing
+│   │   ├── 📄 data_loader.py
+│   │   ├── 📄 preprocessor.py
+│   │   └── 📄 README.md
+│   ├── 📂 models/                 # SNN model implementations
+│   │   ├── 📄 snn_model.py
+│   │   ├── 📄 layers.py
+│   │   └── 📄 README.md
+│   ├── 📂 training/              # Training and evaluation
+│   │   ├── 📄 trainer.py
+│   │   ├── 📄 metrics.py
+│   │   └── 📄 README.md
+│   ├── 📂 utils/                 # Utilities and visualization
+│   │   ├── 📄 config.py
+│   │   ├── 📄 visualization.py
+│   │   └── 📄 README.md
+│   └── 📄 main.py               # Main execution script
+├── 📄 config.yaml               # Configuration file
+├── 📄 requirements.txt          # Project dependencies
+├── 📄 Dockerfile               # Container configuration
+└── 📄 README.md               # Project documentation
 
 ## Key Components
 
