@@ -43,8 +43,6 @@ pre-commit install
 
 ## Contributing
 
-[Add contribution guidelines here]
 
 ## License
 
-[Add license information here]
