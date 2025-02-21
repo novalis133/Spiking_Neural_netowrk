@@ -5,11 +5,11 @@ This repository contains various implementations of Spiking Neural Networks (SNN
 ## Project Structure
 
 - **NeuroSpike-MNIST**: Implementation of SNN for MNIST dataset classification
-- **drl_SNN**: Deep Reinforcement Learning with SNNs
+- **RSNN**: Deep Reinforcement Learning with SNNs
   - Implementation of CartPole environment using SNNs
   - Includes tutorial notebook and production code
   - Uses policy gradient method with leaky integrate-and-fire neurons
-- **supervised_SNN**: Supervised Learning implementations using SNNs
+- **SSNN**: Supervised Learning implementations using SNNs
 
 ## Getting Started
 
