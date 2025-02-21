@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  snn:
+    build: .
+    volumes:
+      - .:/app
+    environment:
+      - CUDA_VISIBLE_DEVICES=0
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    ports:
+      - "6006:6006"  # For TensorBoard
+    command: python src/main.py
+
+  tensorboard:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "6006:6006"
+    command: tensorboard --logdir logs --host 0.0.0.0
+    depends_on:
+      - snn

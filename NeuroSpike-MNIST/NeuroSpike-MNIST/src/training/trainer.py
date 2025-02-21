@@ -64,29 +64,12 @@ class SNNTrainer:
         return avg_loss, accuracy
     
     def train(self, train_loader, val_loader, epochs):
-        metrics = {
-            'train_loss': [],
-            'val_loss': [],
-            'train_acc': [],
-            'val_acc': []
-        }
-        
         best_accuracy = 0
         checkpoint_path = 'checkpoints/best_model.pth'
         
         for epoch in range(epochs):
-            # Training
             train_loss = self.train_epoch(train_loader)
-            metrics['train_loss'].append(train_loss)
-            
-            # Validation
             val_loss, accuracy = self.validate(val_loader)
-            metrics['val_loss'].append(val_loss)
-            metrics['val_acc'].append(accuracy)
-            
-            print(f'Epoch {epoch+1}/{epochs}:')
-            print(f'Train Loss: {train_loss:.4f}')
-            print(f'Val Loss: {val_loss:.4f}, Val Acc: {accuracy:.4f}')
             
             # Save best model
             if accuracy > best_accuracy:
@@ -97,5 +80,3 @@ class SNNTrainer:
                     'accuracy': accuracy,
                     'epoch': epoch
                 }, checkpoint_path)
-        
-        return metrics  # Add this line to return the metrics dictionary

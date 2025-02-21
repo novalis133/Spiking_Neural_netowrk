@@ -20,27 +20,6 @@ wheels/
 .installed.cfg
 *.egg
 
-<<<<<<< HEAD
-# Virtual Environment
-venv/
-ENV/
-env/
-.env
-
-# IDE specific files
-.idea/
-.vscode/
-*.swp
-.DS_Store
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# Dataset files
-*.pkl
-*.h5
-*.npy
-=======
 # Environments
 .env
 .venv
@@ -64,4 +43,3 @@ logs/
 
 # OS
 .DS_Store
->>>>>>> 8277803 (Update: Added training visualization and GPU support)

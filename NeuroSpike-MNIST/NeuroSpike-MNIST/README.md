@@ -1,36 +1,3 @@
-<<<<<<< HEAD
-# Spiking Neural Network Implementations
-
-This repository contains various implementations of Spiking Neural Networks (SNNs) for different learning paradigms.
-
-## Project Structure
-
-- **NeuroSpike-MNIST**: Implementation of SNN for MNIST dataset classification
-- **drl_SNN**: Deep Reinforcement Learning with SNNs
-  - Implementation of CartPole environment using SNNs
-  - Includes tutorial notebook and production code
-  - Uses policy gradient method with leaky integrate-and-fire neurons
-- **supervised_SNN**: Supervised Learning implementations using SNNs
-
-## Getting Started
-
-### Prerequisites
-- Python 3.x
-- PyTorch
-- SNNTorch
-- OpenAI Gym
-- NumPy
-- Matplotlib
-
-### Installation
-```bash
-pip install torch snntorch gym numpy matplotlib
-```
-
-## Usage
-
-Each implementation has its own directory with specific instructions.
-=======
 # NeuroSpike-MNIST: Biologically-Inspired Digit Recognition
 
 A comprehensive implementation of Spiking Neural Networks using SNNTorch, designed for efficient and flexible neural processing.
@@ -253,30 +220,14 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - SNNTorch library and its contributors
 - PyTorch team
 - Neural coding and SNN research community
->>>>>>> 8277803 (Update: Added training visualization and GPU support)
 
 ## Development Setup
 
 ### Pre-commit Hooks
 This project uses pre-commit hooks to maintain code quality. To set up:
 
-<<<<<<< HEAD
-- Install pre-commit:
-=======
 1. Install pre-commit:
->>>>>>> 8277803 (Update: Added training visualization and GPU support)
 ```bash
 conda activate rsnn
 pre-commit install
 ```
-<<<<<<< HEAD
-
-## Contributing
-
-[Add contribution guidelines here]
-
-## License
-
-[Add license information here]
-=======
->>>>>>> 8277803 (Update: Added training visualization and GPU support)
