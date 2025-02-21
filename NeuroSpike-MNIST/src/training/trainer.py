@@ -13,6 +13,7 @@ class SNNTrainer:
     def train_epoch(self, train_loader):
         self.model.train()
         total_loss = 0
+        correct = 0
         
         for batch_idx, (data, target) in enumerate(tqdm(train_loader)):
             data, target = data.to(self.device), target.to(self.device)
@@ -27,13 +28,19 @@ class SNNTrainer:
             # Calculate loss
             loss = self.criterion(spike_output, target)
             
+            # Calculate accuracy
+            pred = spike_output.argmax(dim=1)
+            correct += pred.eq(target).sum().item()
+            
             # Backward pass
             loss.backward()
             self.optimizer.step()
             
             total_loss += loss.item()
         
-        return total_loss / len(train_loader)
+        avg_loss = total_loss / len(train_loader)
+        accuracy = correct / len(train_loader.dataset)
+        return avg_loss, accuracy
     
     def validate(self, val_loader):
         self.model.eval()
@@ -76,26 +83,27 @@ class SNNTrainer:
         
         for epoch in range(epochs):
             # Training
-            train_loss = self.train_epoch(train_loader)
+            train_loss, train_acc = self.train_epoch(train_loader)
             metrics['train_loss'].append(train_loss)
+            metrics['train_acc'].append(train_acc)
             
             # Validation
-            val_loss, accuracy = self.validate(val_loader)
+            val_loss, val_acc = self.validate(val_loader)
             metrics['val_loss'].append(val_loss)
-            metrics['val_acc'].append(accuracy)
+            metrics['val_acc'].append(val_acc)
             
             print(f'Epoch {epoch+1}/{epochs}:')
-            print(f'Train Loss: {train_loss:.4f}')
-            print(f'Val Loss: {val_loss:.4f}, Val Acc: {accuracy:.4f}')
+            print(f'Train Loss: {train_loss:.4f}, Train Acc: {train_acc:.4f}')
+            print(f'Val Loss: {val_loss:.4f}, Val Acc: {val_acc:.4f}')
             
             # Save best model
-            if accuracy > best_accuracy:
-                best_accuracy = accuracy
+            if val_acc > best_accuracy:
+                best_accuracy = val_acc
                 torch.save({
                     'model_state_dict': self.model.state_dict(),
                     'optimizer_state_dict': self.optimizer.state_dict(),
-                    'accuracy': accuracy,
+                    'accuracy': val_acc,
                     'epoch': epoch
                 }, checkpoint_path)
         
-        return metrics  # Add this line to return the metrics dictionary
+        return metrics
