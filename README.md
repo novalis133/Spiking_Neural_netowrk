@@ -1,6 +1,6 @@
 # Spiking Neural Network Implementations
 
-![SNN Banner](https://via.placeholder.com/800x200.png?text=Spiking+Neural+Networks)  
+![SNN Banner](https://images.app.goo.gl/yCXpjPmUDfyy9NmB9)  
 *Implementations of Spiking Neural Networks (SNNs) for various learning paradigms, including supervised and reinforcement learning.*
 
 This repository provides a collection of Spiking Neural Network (SNN) implementations designed for researchers, students, and developers interested in neuromorphic computing. It includes projects for MNIST classification, reinforcement learning with CartPole, and supervised learning, leveraging tools like PyTorch and SNNTorch.
