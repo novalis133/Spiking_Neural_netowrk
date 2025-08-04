@@ -1,6 +1,5 @@
 # SSNN Architecture Documentation
 
-![SSNN Architecture Banner](https://source.unsplash.com/800x200/?software-architecture,neural-network)  
 *Technical documentation for the Supervised Spiking Neural Network framework.*
 
 This document details the architecture of the **SSNN** framework, a modular platform for supervised learning with Spiking Neural Networks (SNNs). It covers design patterns, system components, data flow, and algorithms, emphasizing modularity, extensibility, and observability. This complements the user-facing `README.md` and aligns with my expertise in neuromorphic computing and supervised learning.
