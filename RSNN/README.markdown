@@ -1,6 +1,5 @@
 # RSNN: Reinforcement Spiking Neural Network
 
-![RSNN Banner](https://source.unsplash.com/800x200/?neural-network,reinforcement-learning,robotics)  
 *Deep reinforcement learning framework using Spiking Neural Networks for continuous control tasks.*
 
 The **RSNN** project implements a Spiking Neural Network (SNN) framework for reinforcement learning (RL), designed for continuous control tasks like those in OpenAI Gym environments (e.g., CartPole, Pendulum). It combines biologically plausible SNNs with policy gradient algorithms (REINFORCE, A2C) and advanced visualization tools. As a Senior AI & Machine Learning Engineer, this project showcases my expertise in neuromorphic computing, deep reinforcement learning, and modular software design, complementing my work in MNIST classification and anomaly detection.
@@ -30,7 +29,7 @@ The **RSNN** project implements a Spiking Neural Network (SNN) framework for rei
 
 ## 📖 Overview
 
-The **RSNN** framework integrates Spiking Neural Networks (SNNs) with reinforcement learning (RL) to tackle continuous control tasks. It supports multiple neuron models (Leaky Integrate-and-Fire, Alpha, Synaptic) and RL algorithms (REINFORCE, A2C), with a focus on modularity and observability. The project includes environment wrappers for OpenAI Gym, real-time visualization of neural activity, and a robust training pipeline. This work is part of the `Medium/snn_implementations` repository, alongside other SNN projects like NeuroSpike-MNIST and supervised SNN implementations.
+The **RSNN** framework integrates Spiking Neural Networks (SNNs) with reinforcement learning (RL) to tackle continuous control tasks. It supports multiple neuron models (Leaky Integrate-and-Fire, Alpha, Synaptic) and RL algorithms (REINFORCE, A2C), with a focus on modularity and observability. The project includes environment wrappers for OpenAI Gym, real-time visualization of neural activity, and a robust training pipeline. This work is part of the `Spiking_Neural_network/RSNN` repository, alongside other SNN projects like NeuroSpike-MNIST and supervised SNN implementations.
 
 ---
 
