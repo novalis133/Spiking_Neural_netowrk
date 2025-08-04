@@ -1,6 +1,5 @@
 # Neuron Models: Spiking Neural Network Evaluation
 
-![Neuron Models Banner](https://source.unsplash.com/800x200/?neural-network,brain,mnist)  
 *Framework for evaluating Spiking Neural Network neuron models with various backpropagation algorithms and surrogate gradients.*
 
 The **Neuron Models** project provides a modular framework for testing Spiking Neural Network (SNN) neuron models (Alpha, Leaky, Synaptic, Lapicque) using different backpropagation algorithms (e.g., BPTT) and surrogate gradient functions (e.g., FastSigmoid, ATan). Designed for supervised learning tasks like MNIST digit classification, it includes tools for experiment tracking, visualization, and result aggregation. As a Senior AI & Machine Learning Engineer, this project showcases my expertise in neuromorphic computing, supervised learning, and rigorous model evaluation, complementing my work in reinforcement learning and anomaly detection.
@@ -29,7 +28,7 @@ The **Neuron Models** project provides a modular framework for testing Spiking N
 
 ## 📖 Overview
 
-The **Neuron Models** project, part of the `Medium/snn_implementations` repository, is designed to evaluate the performance of various SNN neuron models on supervised learning tasks, primarily MNIST digit classification. It supports multiple neuron models (Alpha, Leaky, Synaptic, Lapicque), backpropagation methods (e.g., BPTT), and surrogate gradient functions (e.g., FastSigmoid, ATan). The framework includes early stopping, comprehensive visualization tools, and CSV-based result logging, enabling systematic comparison of neuron performance. This project highlights my expertise in neuromorphic computing and rigorous model evaluation.
+The **Neuron Models** project, part of the `Spiking_Neural_network/supervised_SNN` repository, is designed to evaluate the performance of various SNN neuron models on supervised learning tasks, primarily MNIST digit classification. It supports multiple neuron models (Alpha, Leaky, Synaptic, Lapicque), backpropagation methods (e.g., BPTT), and surrogate gradient functions (e.g., FastSigmoid, ATan). The framework includes early stopping, comprehensive visualization tools, and CSV-based result logging, enabling systematic comparison of neuron performance. This project highlights my expertise in neuromorphic computing and rigorous model evaluation.
 
 ---
 
