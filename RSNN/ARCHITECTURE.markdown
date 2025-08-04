@@ -1,6 +1,5 @@
 # RSNN Architecture Documentation
 
-![RSNN Architecture Banner](https://source.unsplash.com/800x200/?software-architecture,neural-network)  
 *Technical documentation for the Reinforcement Spiking Neural Network framework.*
 
 This document details the architecture of the **RSNN** framework, a Spiking Neural Network (SNN) system for reinforcement learning (RL) in continuous control tasks. It outlines design patterns, system components, data flow, and algorithms, emphasizing modularity, extensibility, and observability. This complements the user-facing `README.md` and aligns with my expertise in neuromorphic computing and RL.
