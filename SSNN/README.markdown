@@ -1,6 +1,5 @@
 # SSNN: Supervised Spiking Neural Networks
 
-![SSNN Banner](https://source.unsplash.com/800x200/?neural-network,brain,supervised-learning)  
 *Modular framework for supervised learning with Spiking Neural Networks, featuring multiple neuron models and backpropagation methods.*
 
 The **SSNN** project implements a flexible framework for supervised learning using Spiking Neural Networks (SNNs), supporting various neuron models (Leaky Integrate-and-Fire, Alpha, Synaptic, Lapicque) and backpropagation methods (BPTT, RTRL, TBPTT). It includes experiment tracking with Weights & Biases, comprehensive visualization tools, and a robust testing suite. As a Senior AI & Machine Learning Engineer, this project showcases my expertise in neuromorphic computing, supervised learning, and modular software design, complementing my work in reinforcement learning and anomaly detection.
@@ -29,7 +28,7 @@ The **SSNN** project implements a flexible framework for supervised learning usi
 
 ## 📖 Overview
 
-The **SSNN** framework, part of the `Medium/snn_implementations` repository, provides a modular platform for supervised learning with Spiking Neural Networks. It supports multiple neuron models and backpropagation methods, making it suitable for tasks like MNIST digit classification. The framework integrates with Weights & Biases for experiment tracking and offers advanced visualization tools for spike trains and membrane potentials. This project demonstrates the application of neuromorphic computing to supervised learning, offering a biologically plausible alternative to traditional neural networks.
+The **SSNN** framework, part of the `Spiking_Neural_network/SSNN` repository, provides a modular platform for supervised learning with Spiking Neural Networks. It supports multiple neuron models and backpropagation methods, making it suitable for tasks like MNIST digit classification. The framework integrates with Weights & Biases for experiment tracking and offers advanced visualization tools for spike trains and membrane potentials. This project demonstrates the application of neuromorphic computing to supervised learning, offering a biologically plausible alternative to traditional neural networks.
 
 ---
 
