@@ -1,6 +1,5 @@
 # Spiking Neural Network Implementations
 
-![SNN Banner](https://source.unsplash.com/800x200/?neural-network,brain,robotics)  
 *Biologically-inspired Spiking Neural Networks for MNIST classification, reinforcement learning, and supervised learning tasks.*
 
 This repository hosts a collection of Spiking Neural Network (SNN) implementations, showcasing efficient and biologically plausible neural processing for various learning paradigms. The primary focus is **NeuroSpike-MNIST**, a robust SNN for MNIST digit classification, alongside implementations for deep reinforcement learning (DRL) in the CartPole environment and supervised learning tasks. As a Senior AI & Machine Learning Engineer, this project highlights my expertise in neuromorphic computing, deep reinforcement learning, and AI-driven tool development, complementing my work in robotics and anomaly detection.
