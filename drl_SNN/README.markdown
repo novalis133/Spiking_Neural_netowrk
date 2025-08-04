@@ -1,6 +1,5 @@
 # SNN Reinforcement Learning for CartPole
 
-![SNN CartPole Banner](https://source.unsplash.com/800x200/?reinforcement-learning,neural-network)  
 *Spiking Neural Network implementation for reinforcement learning in the CartPole environment using policy gradient methods.*
 
 This project implements a Spiking Neural Network (SNN) for reinforcement learning, specifically applied to the CartPole environment from OpenAI Gym. It utilizes Leaky Integrate-and-Fire (LIF) neurons and a policy gradient method to train an agent to balance a pole on a cart. As a Senior AI & Machine Learning Engineer, this project showcases my expertise in neuromorphic computing, deep reinforcement learning, and biologically-inspired AI, complementing my work in MNIST classification and anomaly detection.
@@ -29,7 +28,7 @@ This project implements a Spiking Neural Network (SNN) for reinforcement learnin
 
 ## 📖 Overview
 
-This project, part of the `Medium/snn_implementations` repository, implements a Spiking Neural Network (SNN) for reinforcement learning in the CartPole environment. The SNN uses Leaky Integrate-and-Fire (LIF) neurons and a policy gradient method to learn an optimal policy for balancing the pole. The implementation includes a modular policy network, a training loop, and a Jupyter notebook with detailed explanations of the SNN backpropagation algorithm. This work demonstrates the application of neuromorphic computing to reinforcement learning, offering a biologically plausible alternative to traditional neural networks.
+This project implements a Spiking Neural Network (SNN) for reinforcement learning in the CartPole environment. The SNN uses Leaky Integrate-and-Fire (LIF) neurons and a policy gradient method to learn an optimal policy for balancing the pole. The implementation includes a modular policy network, a training loop, and a Jupyter notebook with detailed explanations of the SNN backpropagation algorithm. This work demonstrates the application of neuromorphic computing to reinforcement learning, offering a biologically plausible alternative to traditional neural networks.
 
 ---
 
